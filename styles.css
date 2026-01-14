@@ -1,0 +1,132 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    max-width: 420px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo .accent {
+    color: #ff6b6b;
+}
+
+.logo .emoji {
+    font-size: 1.4em;
+}
+
+.subtitle {
+    margin-top: 6px;
+    color: #555;
+}
+
+input {
+    width: 80%;
+    padding: 12px;
+    margin: 12px auto;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    background: #4a4aff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3a3aff;
+}
+
+button.secondary {
+    background: #aaa;
+}
+
+button.secondary:hover {
+    background: #888;
+}
+
+.skip {
+    background: #ff6b6b;
+}
+
+.skip:hover {
+    background: #ff5252;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#password-display {
+    font-size: 26px;
+    font-weight: bold;
+    background: #f0f4ff;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 20px 0;
+    word-break: break-all;
+}
+
+#copy-btn {
+    background: #28a745;
+}
+
+#copy-btn:hover {
+    background: #218838;
+}
+
+.small-note,
+.security-note {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 16px;
+}
+
+.security-note {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 30px;
+    color: white;
+    font-size: 0.85em;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassGenie – Your Password Wish, Granted</title>
+    <link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- LOGIN -->
+        <div id="login" class="section active">
+            <h1 class="logo">
+                <span class="emoji">🧞‍♂️</span>
+                Pass<span class="accent">Genie</span>
+            </h1>
+            <p class="subtitle">Three wishes. One strong password.</p>
+
+            <input type="text" id="username" placeholder="Your email or cellphone" required>
+            <button onclick="startLogin()">Let’s Begin</button>
+
+            <p class="small-note">
+                Demo app only. Use a password manager + MFA for real accounts.
+            </p>
+        </div>
+
+        <!-- DEMO AUTH -->
+        <div id="mfa" class="section">
+            <h2>Quick Check</h2>
+            <p>Demo only — enter <strong>any 6-digit number</strong></p>
+
+            <input type="text" id="mfa-code" placeholder="6-digit code" maxlength="6">
+            <button onclick="verifyMFA()">Continue</button>
+            <button class="secondary" onclick="backToLogin()">Back</button>
+        </div>
+
+        <!-- QUESTIONS -->
+        <div id="questionnaire" class="section">
+            <h2>Your 3 Wishes</h2>
+
+            <p id="question-text"></p>
+            <input type="text" id="answer" placeholder="Your answer...">
+
+            <div class="buttons">
+                <button onclick="submitAnswer()">Next →</button>
+                <button class="skip" onclick="skipQuestion()">Skip</button>
+            </div>
+
+            <p class="progress">
+                Answered: <span id="count">0</span>/3
+            </p>
+        </div>
+
+        <!-- RESULT -->
+        <div id="result" class="section">
+            <h2>Your Password</h2>
+
+            <div id="password-display"></div>
+
+            <button id="copy-btn" onclick="copyPassword()">Copy</button>
+            <p id="copy-msg" class="small-note"></p>
+
+            <button class="secondary" onclick="resetAll()">Make Another Wish</button>
+
+            <p class="security-note">
+                ⚠️ Demo only — never reuse passwords.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>
+            PassGenie · Built while learning AWS
+        </p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
